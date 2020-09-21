@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  classifier-api:
+    build: .
+    container_name: "classifier-api"
+    ports:
+      - 80:80
+    volumes:
+      - ./app/:/app/
