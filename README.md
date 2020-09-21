@@ -50,6 +50,23 @@ A mutual information classifier was ran on the data. It was determined that
 only two variables affected the target, `numeric0` and `categorical0`. In order
 to reduce network overhead, only the two relevant variables are sent.
 
+| Feature | Mutual Information |
+|---------|--------------------|
+| 	categorical0_a |	0.0816113 |
+|	numeric0       |	0.0473467 |
+| 	categorical0_b |	0.0281643 |
+| 	categorical0_c |	0.0259607 |
+| 	day_of_month   |	<0.01 |
+| 	month 	       | <0.01 |
+| 	seconds 	   | <0.01 |
+| 	numeric1       |	0 |
+| 	timestamp      |	0 |
+| 	hour           |	0 |
+| 	year           | 	0 |
+| 	day_of_week    |	0 |
+
+It is also worth noting that `categorical0_b` and `categorical0_c` have no 
+mutual information when rows where `categorical0 == a` are removed.
 ### Metric used
 
 A binary classification problem such as this one is usually judged on one of
